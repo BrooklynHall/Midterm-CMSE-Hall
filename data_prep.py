@@ -171,8 +171,6 @@ cleaned_rec['Time_sec'] = impute_ffill(cleaned_rec['Time_sec'])
 cleaned_rec['Time_sec'] = cleaned_rec['Time_sec'].fillna(cleaned_rec['Time_sec'].mean())
 cleaned_rec['Nationality_full'] = cleaned_rec['Nationality'].apply(decode)
 
-print("Cleaned Records:", cleaned_rec.shape)
-
 # save cleaned
 cleaned_oly.to_csv('data/cleaned_olympic_data.csv', index=False)
 cleaned_rec.to_csv('data/cleaned_records_data.csv', index=False)

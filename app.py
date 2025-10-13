@@ -111,7 +111,7 @@ with tab3:
     
     if len(combined_df_insights) > 0 and not combined_df_insights['Time_sec'].isna().all():
         st.subheader("Event-Specific Trends")
-        st.write("This standout line chart shows median swim times over years for each event, using sidebar selections or all data if none. It highlights progress in specific strokes and distances.")
+        st.write("This standout line chart shows median swim times over years for each event, using sidebar selections or all data if none. It shows progress in specific strokes and distances.")
         if len(combined_df_insights) > 0:
             fig_event = px.line(combined_df_insights.groupby(['Year', 'Event'])['Time_sec'].median().reset_index(), x='Year', y='Time_sec', color='Event')
             st.plotly_chart(fig_event, key="event_specific_line")

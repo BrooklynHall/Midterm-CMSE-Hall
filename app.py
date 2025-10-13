@@ -131,6 +131,6 @@ with tab4:
     st.write("**Data Sources:** Kaggle Olympic data, GitHub Records.")
     st.write("https://www.kaggle.com/datasets/datasciencedonut/olympic-swimming-1912-to-2020")
     st.write("https://github.com/n-reeves/Swim-Record-Analysis")
-    st.write("**Github Repo:** -----temp-----")
+    st.write("**Github Repo:** https://github.com/BrooklynHall/Midterm-CMSE-Hall")
 
 st.sidebar.text("Blake Hall - CMSE 830 Midterm")

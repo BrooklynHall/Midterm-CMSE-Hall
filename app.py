@@ -35,7 +35,7 @@ if sex_filter != 'All':
     filtered_records = filtered_records[filtered_records['Sex'] == sex_filter].copy()
 
 # tabs
-tab1, tab2, tab3, tab4 = st.tabs(["Introduction & Data", "Trends & Exploration", "Insights & Analysis", "Documentation"])
+tab1, tab2, tab3, tab4 = st.tabs(["Introduction", "Exploration", "Insights & Analysis", "Documentation"])
 
 with tab1:
     st.header("Swimming Performance: Olympic vs World Records Over Time")

@@ -48,7 +48,8 @@ pandas numpy pycountry matplotlib seaborn streamlit plotly
 
 
 
-**File Setup:**
+**File Setup:** 
+
 data/olympic\_swimming\_1912\_2020.csv
 
 data/swim\_records.csv

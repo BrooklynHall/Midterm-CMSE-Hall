@@ -67,7 +67,7 @@ with tab2:
     else:
         combined_df = pd.concat([filtered_olympic.assign(Source='Olympic'), filtered_records.assign(Source='Records')]).copy()
     
-    # per Year aggregated gender gap, men - women, using mean groupby to fix error
+    # per Year aggregated gender gap men - women, using mean groupby
     men_per_year = combined_df[combined_df['Sex'] == 'Men'].groupby('Year')['Time_sec'].mean()
     women_per_year = combined_df[combined_df['Sex'] == 'Women'].groupby('Year')['Time_sec'].mean()
     gap_series = (men_per_year - women_per_year).fillna(0)

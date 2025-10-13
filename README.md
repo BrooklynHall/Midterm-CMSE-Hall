@@ -2,7 +2,7 @@
 
 **Project Overview**
 
-This project explores swimming performance trends using historical Olympic results (1912-2020) and world records data. It provides plots to analyze time improvements, gender differences, top performing countries, event specific trends, and the impact of the 2009 techsuit ban. 
+This project explores swimming performance trends using historical Olympic results (1912-2020) and world records data. It provides plots to analyze time improvements, gender differences, top performing countries, event specific trends, and the impact of the 2009 techsuit ban.
 
 
 
@@ -10,7 +10,7 @@ I chose this dataset due to my 13 long years of highly competitive swimming and 
 
 
 
-From the ida/eda we see the obvious trend of year and time, where time goes down and improvements are made gradually over time, dipping a little in 2009. We see that there is a gender aspect to the sport that is decreasing over time, women are slowly catching up to men (particularly Katie Ledecky). There were some crazy outlier times that were from the old Olympic data (1920's or so) that were removed. We ended up removing some of the outliers via IQR (although most wouldn't matter much anyways). We see that faster events have actually tended to improve faster than longer distance races, mostly due to technique changes. 
+From the ida/eda we see the obvious trend of year and time, where time goes down and improvements are made gradually over time, dipping a little in 2009. We see that there is a gender aspect to the sport that is decreasing over time, women are slowly catching up to men (particularly Katie Ledecky). There were some crazy outlier times that were from the old Olympic data (1920's or so) that were removed. We ended up removing some of the outliers via IQR (although most wouldn't matter much anyways). We see that faster events have actually tended to improve faster than longer distance races, mostly due to technique changes.
 
 
 
@@ -18,7 +18,7 @@ For preprocessing we imported a ton of data in through csv, then handled some mi
 
 
 
-With streamlit, i tried making a tabbed interface that has sidebar filters that effect every chart. I have made line, bar, 3d scatter, and a few more charts to boot. All of the charts are interactive using plotly. 
+With streamlit, i tried making a tabbed interface that has sidebar filters that effect every chart. I have made line, bar, 3d scatter, and a few more charts to boot. All of the charts are interactive using plotly.
 
 
 
@@ -36,7 +36,7 @@ With streamlit, i tried making a tabbed interface that has sidebar filters that 
 
 **Insights:** Shows tech ban slowing Olympic improvements post-2009 with steady records progress.
 
-The code uses Altair for plotting, handling 5,000 rows of data from two sources (Olympic 4311 rows, Records 1683 rows).
+The code uses plotly for plotting, handling 5,000 rows of data from two sources (Olympic 4311 rows, Records 1683 rows).
 
 
 

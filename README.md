@@ -12,7 +12,7 @@ I chose this dataset due to my 13 long years of highly competitive swimming and 
 
 
 
-From the ida/eda we see the obvious trend of year and time, where time goes down and improvements are made gradually over time, dipping a little in 2009. We see that there is a gender aspect to the sport that is decreasing over time, women are slowly catching up to men (particularly Katie Ledecky). There were some outlier times that were from the old Olympic data (1920's or so) that were removed. We ended up removing some of the outliers via IQR (although most wouldn't matter much anyways). We see that faster events have actually tended to improve faster than longer distance races, mostly due to technique changes.
+From the ida/eda we see the trend of year and time, where time goes down and improvements are made gradually over time, dipping a little in 2009. We see that there is a gender aspect to the sport that is decreasing over time, women are slowly catching up to men (particularly Katie Ledecky). There were some outlier times that were from the old Olympic data (1920's or so) that were removed. We ended up removing some of the outliers via IQR (although most wouldn't matter much anyways). We see that faster events have actually tended to improve faster than longer distance races, mostly due to technique changes.
 
 
 

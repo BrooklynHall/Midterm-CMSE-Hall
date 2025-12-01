@@ -156,9 +156,7 @@ cleaned_oly['Nationality_full'] = cleaned_oly['Nationality'].apply(decode)
 
 # clean records
 cleaned_rec = records_df.copy()
-cleaned_rec['Event'] = cleaned_rec.apply(lambda row: f"{row['Distance']}m {row['Stroke']}", axis=1)
-if 'Year' not in cleaned_rec.columns:
-    cleaned_rec['Year'] = cleaned_rec['Date'].str.extract(r'(\d{4})', expand=False).astype(float)
+cleaned_rec['Year'] = cleaned_rec['Date'].str.extract(r'(\d{4})', expand=False).astype(int) 
 if 'Athlete' not in cleaned_rec.columns:
     cleaned_rec['Athlete'] = cleaned_rec['Swimmer']
 cleaned_rec = cleaned_rec[['Year', 'Distance', 'Stroke', 'Sex', 'Nationality', 'Athlete', 'Time', 'Event', 'Source']]
@@ -169,7 +167,12 @@ cleaned_rec['Time_sec'] = cleaned_rec['Time'].apply(time_seconds)
 cleaned_rec = cleaned_rec[cleaned_rec['Time_sec'].notnull()]
 cleaned_rec['Time_sec'] = impute_ffill(cleaned_rec['Time_sec'])
 cleaned_rec['Time_sec'] = cleaned_rec['Time_sec'].fillna(cleaned_rec['Time_sec'].mean())
+# Fix Distance to have m
+cleaned_rec['Distance'] = cleaned_rec['Distance'].astype(str) + 'm'
+cleaned_rec['Event'] = cleaned_rec.apply(lambda row: f"{row['Distance']} {row['Stroke']}", axis=1)
 cleaned_rec['Nationality_full'] = cleaned_rec['Nationality'].apply(decode)
+
+print("Cleaned Records:", cleaned_rec.shape)
 
 # save cleaned
 cleaned_oly.to_csv('data/cleaned_olympic_data.csv', index=False)

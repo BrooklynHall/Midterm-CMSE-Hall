@@ -303,7 +303,7 @@ with tabs[3]:
     else:
         st.write("Generate predictions in sidebar to populate history and trends.")
 
-    st.write("**Ensemble Methods:** Handle complexity in data. Hyper-tuning, GridSearch, optimizes. Time series prediction tailoring.")
+    st.write("**Ensemble Methods:** Handle complexity in data. Hyper-tuning, GridSearch, optimization. Time series prediction tailoring.")
 
 with tabs[4]:
     st.header("Documentation & Usage")
@@ -316,7 +316,7 @@ with tabs[4]:
     st.write("- Stroke: string for the swimming style.")
     st.write("- Event: string for the full event name.")
     st.write("- Nationality: string for the country.")
-    st.subheader("Rubric Completion")
+    st.subheader("Completion: ")
     st.write("1. Data Collection and Preparation: Two distinct data sources, which are the Kaggle Olympic results and the GitHub world records datasets. Advanced data cleaning and preprocessing, including removing outliers with the IQR method, handling missing values that follow missing at random patterns using forward-fill and mean imputation, and comparing methods to choose the one that best minimizes changes in standard deviation to reduce bias. Complex data integration techniques: concatenating datasets by matching keys such as year, sex, and stroke, parsing time strings in various formats to convert them into seconds, decoding country codes with the pycountry library, and dropping duplicate entries.")
     st.write("2. Exploratory Data Analysis and Visualization: Five different types of visualizations: histograms for distribution, box plots for variance, scatter plots for relationships, heatmaps for correlations, three-dimensional scatter plots for multidimensional equity analysis, and trend lines for time series. Statistical analysis of the dataset with descriptive statistics from group describes, correlations and hypothesis tests like the pearson correlation for time trends and t-tests for gender gaps.")
     st.write("3. Data Processing and Feature Engineering: Multiple feature engineering techniques: scaling with StandardScaler to normalize times, label encoding for categorical variables like sex mapped to numbers from alphabetical strokes, and polynomial features such as squaring the year for trends. Advanced data transformation methods through aggregations in visualizations and grouping for stats.")

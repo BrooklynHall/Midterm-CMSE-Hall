@@ -175,7 +175,7 @@ with tabs[0]:
     st.write("**Data Sources:**")
     st.write("- Kaggle dataset (Olympic swimming 1912-2020)")
     st.write("- GitHub dataset (World records)")
-    st.write("**Advanced Cleaning & Imputation:**")
+    st.write("**Cleaning & Imputation:**")
     st.write("- Outliers removed using IQR method (~5-10% filtered)")
     st.write("- Missing values (MAR patterns) handled with forward-fill + mean imputation")
     st.write("- Comparison: ffill minimizes SD change for superior bias control")

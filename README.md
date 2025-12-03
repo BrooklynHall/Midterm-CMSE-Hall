@@ -96,19 +96,6 @@ The app has a tabbed interface with sidebar filters (year, events, sex, source) 
    pip install -r requirements.txt
 
 
-### File Structure
-
-/
-├── data/
-│   ├── olympic_swimming_1912_2020.csv  # Raw Olympic data
-│   ├── swim_records.csv                # Raw records data
-│   ├── cleaned_olympic_data.csv        # Processed Olympic data (exported by app)
-│   └── cleaned_records_data.csv        # Processed records data (exported by app)
-├── app.py                              # Main Streamlit app
-├── requirements.txt                    # Python dependencies
-└── README.md                           # This file
-
-
 ## Author & Acknowledgments
 - **Author**: Blake Hall (CMSE 830 Final Project).
 - Repository: [https://github.com/BrooklynHall/midterm-cmse-hall](https://github.com/BrooklynHall/midterm-cmse-hall).

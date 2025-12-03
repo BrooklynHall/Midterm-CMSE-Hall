@@ -64,7 +64,7 @@ The app has a tabbed interface with sidebar filters (year, events, sex, source) 
 - **Caching & Performance**: Handles ~5,000+ rows efficiently with session state for history persistence.
 - **Deployment Ready**: Caches model training; supports Streamlit Cloud/GitHub.
 
-## Technologies Used
+## Packages and Data Used
 - **Languages/Python Libraries**: Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Plotly, pycountry, Joblib).
 - **App Framework**: Streamlit for web interface.
 - **Data Sources**: Kaggle (Olympic data), GitHub (World Records data).

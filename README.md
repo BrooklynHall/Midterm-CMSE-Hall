@@ -10,8 +10,8 @@ The dataset selection was driven by my personal background: 13 years of my own c
 Insights from exploratory data analysis (EDA) include:
 - **Time Trends**: Swim times have declined steadily over decades, with a notable slowdown after the 2009 tech suit ban, highlighting regulatory impact.
 - **Gender Equity**: Women have closed the performance gap with men, though disparities persist in some events.
-- **Event Variations**: Shorter events (sprints) show faster improvement due to technique differences, while longer distances rely more on endurance.
-- **Outliers and Anomalies**: Removed extreme values from early Olympics (1920s) based on IQR to ensure clean analysis.
+- **Events**: Shorter events (sprints) show faster improvement due to technique differences, while longer distances rely more on endurance.
+- **Outliers**: Removed extreme values from early Olympics (1920s) based on IQR to ensure clean analysis.
 - **Data Quality**: Missing patterns are Missing At Random (MAR), correlated with year, allowing imputation.
 
 The app has a tabbed interface with sidebar filters (year, events, sex, source) affecting all visualizations. It has six visualizations, statistical tests, and ML models (Linear Regression, Random Forest, Gradient Boosting).

@@ -305,29 +305,9 @@ with tabs[0]:
     st.write("This app analyzes historical Olympic and world record swimming data to show trends in performance, equity, and technology. The app shows ~3086 Olympic and ~2327 Records rows for new insights.")
     
     st.subheader("Data Collection & Advanced Preparation")
-<<<<<<< HEAD
     st.write("**Data Sources:** Olympic swimming data (1912-2020) and world records data.")
     st.write("**Cleaning:** Outlier removal using IQR, imputation for missing values, time parsing, and country decoding.")
     st.write("**Feature Engineering:** Standardization, label encoding, and polynomial features.")
-=======
-    st.write("**Data Sources:**")
-    st.write("- Kaggle dataset (Olympic swimming 1912-2020)")
-    st.write("- GitHub dataset (World records)")
-    st.write("**Cleaning & Imputation:**")
-    st.write("- Outliers removed using IQR method (~5-10% filtered)")
-    st.write("- Missing values (MAR patterns) handled with forward-fill + mean imputation")
-    st.write("- Comparison: ffill minimizes SD change for superior bias control")
-    st.write("**Integration & Parsing:**")
-    st.write("- Concatenated by year/sex/stroke")
-    st.write("- Time strings parsed ('1:23.45' to seconds)")
-    st.write("- Country codes decoded (pycountry library)")
-    st.write("- Duplicates dropped")
-    st.write("**Feature Engineering:**")
-    st.write("- Scaling: StandardScaler for time normalization")
-    st.write("- Encoding: Label encoding sex: Men→0, Women→1; strokes alphabetical")
-    st.write("- Polynomials: Year^2 for quadratic trends")
-    st.write("**Advanced Details:** Encoders fitted on union of datasets (avoids unseen labels). Imputation preserves temporal trends. Missingness analyzed via heatmaps.")
->>>>>>> 088982b25fff77a9941cdc4268bdb3f4c63e5b7a
 
     col_a, col_b = st.columns(2)
     with col_a:
@@ -514,40 +494,13 @@ with tabs[4]:
     else:
         st.write("No predictions yet.")
 
-<<<<<<< HEAD
     st.write("Ensemble methods enhance prediction accuracy.")
-=======
-    st.write("**Ensemble Methods:** Handle complexity in data. Hyper-tuning, GridSearch, optimization. Time series prediction tailoring.")
->>>>>>> 088982b25fff77a9941cdc4268bdb3f4c63e5b7a
 
 with tabs[5]:
     st.header("Documentation & Usage")
-<<<<<<< HEAD
     st.write("Explore tabs with sidebar filters and prediction tools for dynamic insights.")
     st.write("**Repository:** https://github.com/BrooklynHall/final-cmse-hall")
     st.write("**Data Dictionary:** Year (int), Time_sec (float), Sex (str: Men/Women), Stroke (str), Event (str), Nationality (str).")
-=======
-    st.write("**Guide:** Interact with sidebar filters/buttons and updates dynamic across tabs with caching for speed and error fallbacks. Explore data, predictions, and insights.")
-    st.write("**Repository:** https://github.com/BrooklynHall/midterm-cmse-hall — Includes data_prep.py for cleaning/integration, cleaned CSVs, requirements.txt, README (data dict, modeling, deployment).")
-    st.write("**Data Dictionary:**")
-    st.write("- Year: integer representing the event year.")
-    st.write("- Time_sec: float representing time in seconds.")
-    st.write("- Sex: string that can be 'Men' or 'Women'.")
-    st.write("- Stroke: string for the swimming style.")
-    st.write("- Event: string for the full event name.")
-    st.write("- Nationality: string for the country.")
-    st.subheader("Completion: ")
-    st.write("1. Data Collection and Preparation: Two distinct data sources, which are the Kaggle Olympic results and the GitHub world records datasets. Advanced data cleaning and preprocessing, including removing outliers with the IQR method, handling missing values that follow missing at random patterns using forward-fill and mean imputation, and comparing methods to choose the one that best minimizes changes in standard deviation to reduce bias. Complex data integration techniques: concatenating datasets by matching keys such as year, sex, and stroke, parsing time strings in various formats to convert them into seconds, decoding country codes with the pycountry library, and dropping duplicate entries.")
-    st.write("2. Exploratory Data Analysis and Visualization: Five different types of visualizations: histograms for distribution, box plots for variance, scatter plots for relationships, heatmaps for correlations, three-dimensional scatter plots for multidimensional equity analysis, and trend lines for time series. Statistical analysis of the dataset with descriptive statistics from group describes, correlations and hypothesis tests like the pearson correlation for time trends and t-tests for gender gaps.")
-    st.write("3. Data Processing and Feature Engineering: Multiple feature engineering techniques: scaling with StandardScaler to normalize times, label encoding for categorical variables like sex mapped to numbers from alphabetical strokes, and polynomial features such as squaring the year for trends. Advanced data transformation methods through aggregations in visualizations and grouping for stats.")
-    st.write("4. Model Development and Evaluation: Two different machine learning models, Linear Regression as a baseline, Random Forest as an ensemble, and Gradient Boosting as an advanced ensemble. Model evaluation and comparison using metrics like mean absolute error, root mean squared error, R-squared, and cross-validation scores. Model selection and validation techniques by choosing Random Forest based on lowest error in cross-validation and robustness.")
-    st.write("5. Streamlit App Development: Created a comprehensive Streamlit application with more than five interactive elements, such as sliders for year range, multiselect for events, select boxes for sex and source, buttons for predictions, and select for visualization types. Included detailed documentation and user guide within the app on the Documentation tab, explaining features and usage. Implemented advanced Streamlit features like caching for model training and data filtering, session state for maintaining prediction history across interactions, and error fallbacks like checks for data availability. Ensured the app is robust and user-friendly with dynamic updates across tabs and informative messages.")
-    st.write("6. GitHub Repository and Documentation: GitHub repository with comprehensive documentation, data dictionary, modeling approach explaining feature engineering and choices, and deployment notes in the README. data_prep.py for preparation, cleaned CSVs for data, a requirements.txt for dependencies, and clear instructions.")
-    st.write("7. Modeling Techniques: Advanced algorithms such as Random Forest and Gradient Boosting ensembles. Sophisticated hyperparameter tuning and optimization using GridSearchCV for n_estimators in Random Forest to improve performance.")
-    st.write("8. Specialized Data Science Applications: Applied techniques for data types like time series through prediction models and visualizations over years. Domain-specific methodologies for sports performance.")
-    st.write("9. High-Performance Computing: Handling large-scale datasets with efficient Pandas operations, grouping, and in-memory caching for faster computations, along with parallel processing in sklearn's GridSearchCV.")
-    st.write("10. Real-world Application and Impact: Real-world applicability of the project through showing the impact of tech suit bans on performance trends, showing views into gender equity in swimming, and recommendations for coaches to focus on realistic technology and for policymakers to monitor athlete health and fairness.")
->>>>>>> 088982b25fff77a9941cdc4268bdb3f4c63e5b7a
 
 
 st.sidebar.text("Blake Hall - CMSE 830 Final Project")

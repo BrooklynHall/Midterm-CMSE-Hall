@@ -378,11 +378,9 @@ with tabs[1]:
     st.write("Time Distribution Changes After Outlier Removal:")
     col_bp1, col_bp2 = st.columns(2)
     with col_bp1:
-        st.write("Olympic:")
         fig_bp_oly = px.box(x=olympic_df['Time_sec'], title="Olympic Time_sec (Post-Outlier Removal)")
         st.plotly_chart(fig_bp_oly)
     with col_bp2:
-        st.write("Records:")
         fig_bp_rec = px.box(x=records_df['Time_sec'], title="Records Time_sec (Post-Outlier Removal)")
         st.plotly_chart(fig_bp_rec)
     

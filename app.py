@@ -1,7 +1,7 @@
 # Final Project: Swimming Performance Analytics and Prediction
 # Blake Hall - CMSE 830 Final Project
 # Streamlit application that integrates two data sources (Olympic Results and World Records) to analyze swimming performance trends, with advanced cleaning, viz, stats, ML, with real-world applications.
-# Repos: https://github.com/BrooklynHall/final-cmse-hall 
+# Repos: https://github.com/BrooklynHall/midterm-cmse-hall 
 
 import streamlit as st
 import pandas as pd
@@ -499,7 +499,7 @@ with tabs[4]:
 with tabs[5]:
     st.header("Documentation & Usage")
     st.write("Explore tabs with sidebar filters and prediction tools for dynamic insights.")
-    st.write("**Repository:** https://github.com/BrooklynHall/final-cmse-hall")
+    st.write("**Repository:** https://github.com/BrooklynHall/midterm-cmse-hall")
     st.write("**Data Dictionary:** Year (int), Time_sec (float), Sex (str: Men/Women), Stroke (str), Event (str), Nationality (str).")
 
 

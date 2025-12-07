@@ -1,7 +1,7 @@
 # Final Project: Swimming Performance Analytics and Prediction
 # Blake Hall - CMSE 830 Final Project
 # Streamlit application that integrates two data sources (Olympic Results and World Records) to analyze swimming performance trends, with advanced cleaning, viz, stats, ML, with real-world applications.
-# Repos: https://github.com/BrooklynHall/final-cmse-hall 
+# Repos: https://github.com/BrooklynHall/midterm-cmse-hall 
 
 import streamlit as st
 import pandas as pd
@@ -302,6 +302,11 @@ tabs = st.tabs(["Introduction & Data Preparation", "Data Preparation Process", "
 
 with tabs[0]:
     st.header("Introduction & Data Preparation")
+    st.write("Overview of the app's purpose, data sources, and initial counts. Scroll to explore key stats on data volume.")
+    
+    st.subheader("How to Use This Tab")
+    st.write("Here, just read through the summaries to get a sense of the raw data we start with and the steps we take to clean it up. Metrics update based on sidebar filters if you tweak them, so play around with year or sex to see how row counts change. Nothing to adjust here beyond that!")
+    
     st.write("This app analyzes historical Olympic and world record swimming data to show trends in performance, equity, and technology. The app shows ~3086 Olympic and ~2327 Records rows for new insights.")
     
     st.subheader("Data Collection & Advanced Preparation")
@@ -316,10 +321,18 @@ with tabs[0]:
         st.metric("Records Rows", filtered_rec.shape[0])
     st.metric("Total Rows", len(filtered_oly) + len(filtered_rec))
     
+    col1, col2 = st.columns(2)
+    with col1:
+        st.write("**Data Flow Diagram:**")
+    with col2:
+        st.image("https://via.placeholder.com/400x200?text=Raw+Data+%2D%3E+Cleaning+%2D%3E+Model", caption="Data Processing Flow")
 
 with tabs[1]:
     st.header("Data Preparation Process")
-    st.write("Overview of data cleaning and processing steps with visualizations.")
+    st.write("Step-by-step walkthrough of cleaning steps with visuals. Scroll through each subsection for details.")
+    
+    st.subheader("How to Use This Tab")
+    st.write("Go into how we transform the raw data into something usable. Each section shows a chart or summary of what I removed or fixed like tracking row drops or imputation effects. If a graph doesn't load or you want specifics, hover over elements for more info. This is mainly read-only to understand the backend stuff I dealt with.")
     
     prep_data = load_and_prepare_data()
     (orig_oly, orig_rec, before_out_oly, after_out_oly, before_out_rec, after_out_rec,
@@ -397,6 +410,11 @@ with tabs[1]:
 
 with tabs[2]:
     st.header("Exploratory Data Analysis & Visualizations")
+    st.write("Interactive charts for exploring patterns. Pick viz types and filters to explore.")
+    
+    st.subheader("How to Use This Tab")
+    st.write("Select a visualization type from the sidebar dropdown things like histogram for time spreads or trend lines for progress. Tweak year, events, or sex filters to zoom in on specifics. The charts update automatically, and you can interact to dig deeper. If no data shows, try loosening filters like setting sex to All. Great for spotting trends or comparing Olympics vs. records.")
+    
     combined_df = pd.concat([filtered_oly.assign(Source='Olympic'), filtered_rec.assign(Source='Records')])
 
     if len(combined_df) > 0:
@@ -427,6 +445,11 @@ with tabs[2]:
 
 with tabs[3]:
     st.header("Statistical Summaries & Insights")
+    st.write("Descriptive stats, tests, and implications. Scroll for correlation and t-tests.")
+    
+    st.subheader("How to Use This Tab")
+    st.write("Look here for the numbers behind the viz mean times, correlations, and tests. If you filter data in the sidebar, the stats update to reflect just that subset. Good for confirming what the charts suggest, like how times link to years or gender gaps. Read the insights at the bottom for the so what? on tech bans and equity.")
+    
     combined_df = pd.concat([filtered_oly.assign(Source='Olympic'), filtered_rec.assign(Source='Records')])
 
     if len(combined_df) > 0:
@@ -461,7 +484,10 @@ with tabs[3]:
 
 with tabs[4]:
     st.header("Predictive Modeling")
-    st.write("Machine learning models trained on year, sex, and stroke for time predictions.")
+    st.write("Model comparisons and prediction tool. See how we predict future times.")
+    
+    st.subheader("How to Use This Tab")
+    st.write("Check out model performances first we compare three like Random Forest for the winner. Then, use the sidebar prediction tool: pick a future year, sex, stroke, and source, hit 'Generate Prediction' to see what the models say. History tracks your attempts below, with a line chart if you've made a few. Handy for forecasting swims like if women might match men's records soon.")
     
     st.subheader("Model Performance")
     col6, col7 = st.columns(2)
@@ -498,9 +524,13 @@ with tabs[4]:
 
 with tabs[5]:
     st.header("Documentation & Usage")
-    st.write("Explore tabs with sidebar filters and prediction tools for dynamic insights.")
-    st.write("**Repository:** https://github.com/BrooklynHall/final-cmse-hall")
+    st.write("Full app guide, repo link, and data details. Scroll for setup tips.")
+    
+    st.subheader("How to Use This Tab and App")
+    st.write("Use the sidebar to filter across all tabs it controls everything dynamically. Start with Intro, then Prep to see cleaning, EDA for experimenting with charts, Stats for deep dives, Modeling for predicting, then back here for this info. If stuck, adjust filters one by one. Datasets are big but cached for speed. Enjoy exploring swimming history!")
+    
+    st.write("**Overall App Tips:** Filters apply everywhere year slider trims data start, multiselect events to focus, sex/source toggle Olympants vs. records. Charts are interactive with hover/zoom. Predictions save session history. If data's empty, broaden filters.")
+    st.write("**Repository:** https://github.com/BrooklynHall/midterm-cmse-hall")
     st.write("**Data Dictionary:** Year (int), Time_sec (float), Sex (str: Men/Women), Stroke (str), Event (str), Nationality (str).")
-
 
 st.sidebar.text("Blake Hall - CMSE 830 Final Project")

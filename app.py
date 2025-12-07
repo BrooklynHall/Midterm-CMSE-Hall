@@ -321,11 +321,6 @@ with tabs[0]:
         st.metric("Records Rows", filtered_rec.shape[0])
     st.metric("Total Rows", len(filtered_oly) + len(filtered_rec))
     
-    col1, col2 = st.columns(2)
-    with col1:
-        st.write("**Data Flow Diagram:**")
-    with col2:
-        st.image("https://via.placeholder.com/400x200?text=Raw+Data+%2D%3E+Cleaning+%2D%3E+Model", caption="Data Processing Flow")
 
 with tabs[1]:
     st.header("Data Preparation Process")

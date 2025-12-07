@@ -391,11 +391,9 @@ with tabs[1]:
     st.write("Time Distribution Changes After Outlier Removal:")
     col_bp1, col_bp2 = st.columns(2)
     with col_bp1:
-        st.write("Olympic:")
         fig_bp_oly = px.box(x=olympic_df['Time_sec'], title="Olympic Time_sec (Post-Outlier Removal)")
         st.plotly_chart(fig_bp_oly)
     with col_bp2:
-        st.write("Records:")
         fig_bp_rec = px.box(x=records_df['Time_sec'], title="Records Time_sec (Post-Outlier Removal)")
         st.plotly_chart(fig_bp_rec)
     
@@ -524,13 +522,8 @@ with tabs[4]:
 
 with tabs[5]:
     st.header("Documentation & Usage")
-    st.write("Full app guide, repo link, and data details. Scroll for setup tips.")
-    
-    st.subheader("How to Use This Tab and App")
-    st.write("Use the sidebar to filter across all tabs it controls everything dynamically. Start with Intro, then Prep to see cleaning, EDA for experimenting with charts, Stats for deep dives, Modeling for predicting, then back here for this info. If stuck, adjust filters one by one. Datasets are big but cached for speed. Enjoy exploring swimming history!")
-    
-    st.write("**Overall App Tips:** Filters apply everywhere year slider trims data start, multiselect events to focus, sex/source toggle Olympants vs. records. Charts are interactive with hover/zoom. Predictions save session history. If data's empty, broaden filters.")
-    st.write("**Repository:** https://github.com/BrooklynHall/midterm-cmse-hall")
+    st.write("Explore tabs with sidebar filters and prediction tools for dynamic insights.")
+    st.write("**Repository:** https://github.com/BrooklynHall/final-cmse-hall")
     st.write("**Data Dictionary:** Year (int), Time_sec (float), Sex (str: Men/Women), Stroke (str), Event (str), Nationality (str).")
 
 st.sidebar.text("Blake Hall - CMSE 830 Final Project")

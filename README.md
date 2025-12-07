@@ -3,9 +3,9 @@
 ## Project Overview
 https://midterm-cmse-hall.streamlit.app
 
-This Streamlit-based web application analyzes historical swimming performance data from Olympic results (1912-2020) and world records to show trends in athlete times, gender equity, event-specific improvements, and the impacts of technological advancements and regulations. The app integrates data from two sources, applies data cleaning and preprocessing, provides interactive visualizations, statistical insights, and machine learning predictions for future performance trends.
+This Streamlit web application analyzes historical swimming performance data from Olympic results (1912-2020) and world records to show trends in athlete times, gender equity, event-specific improvements, and the impacts of technological advancements and regulations. The app has data from two sources, applies data cleaning and preprocessing, has interactive visualizations, statistical insights, and machine learning predictions for future performance trends.
 
-The dataset selection was driven by my personal background: 13 years of my own competitive swimming provided deep insight into the sport's dynamics, allowing for analysis of trends like time improvements, gender gaps (women's progress under figures like Katie Ledecky), and the effects of the 2009 tech suit ban. The Olympic dataset (from Kaggle) and world records dataset give exploration of how the sport has evolved, with gradual time reductions over time, plateauing post-ban due to regulatory changes and technique shifts.
+The dataset selection was driven by my personal background: 13 years of my own competitive swimming provided insight into the sport's dynamics, allowing for analysis of trends like time improvements, gender gaps (women's progress under figures like Katie Ledecky), and the effects of the 2009 tech suit ban. The Olympic dataset (from Kaggle) and world records dataset give exploration of how the sport has evolved, with gradual time reductions over time, plateauing post-ban due to regulatory changes and technique shifts.
 
 Insights from exploratory data analysis (EDA) include:
 - **Time Trends**: Swim times have declined steadily over decades, with a notable slowdown after the 2009 tech suit ban, highlighting regulatory impact.
